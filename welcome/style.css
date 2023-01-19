@@ -1,0 +1,37 @@
+*{
+    
+    background-color: rgb(215, 244, 234);
+}
+
+h2{
+    font-size: 50px;
+    text-align: center;
+    margin:auto;
+    margin-top: 4em;
+    color: rgb(34, 84, 68);
+}
+
+p{
+    text-align: center;
+    color: rgb(42, 102, 83);
+}
+
+
+button{
+    text-align: center;
+    margin: auto;
+    margin-left: 37rem;
+    margin-top: 5rem;
+    padding: 5px 15px 5px 15px;
+    background-color: rgb(76, 197, 197);
+    color: aliceblue;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+button:hover{
+    background-color: teal;
+}

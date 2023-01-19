@@ -1,16 +1,42 @@
-function move() {
-    const element = document.getElementById("myBar");
-    let width = 0;
-    const id = setInterval(frame, 1000);
-    function frame() {
-        if(width == 50) {
-            clearInterval(id);
-        } else {
-            width++;
-            element.style.width = width + '%';
-        }
-    }
+
+let time = starting = 60;
+
+const countdownEL = document.getElementById('countdown');
+
+setInterval(changeCountdown, 1000);
+function changeCountdown() {
+    
+// const minutes = Math.floor(time / 60);
+let seconds = time % 60;
+
+
+// countdownEL.innerHTML = time;seconds;
+if(time === 0) {
+                clearInterval(changeCountdown);
+            } else {
+           time--;
+           countdownEL.innerHTML = time;seconds;
+                
+          }
+    // time--;
 }
+
+
+
+
+// function move() {
+//     const element = document.getElementById("myBar");
+//     let width = 0;
+//     const id = setInterval(frame, 1000);
+//     function frame() {
+//         if(width == 50) {
+//             clearInterval(id);
+//         } else {
+//             width++;
+//             element.style.width = width + '%';
+//         }
+//     }
+// }
 
 const questionEL = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
@@ -96,9 +122,9 @@ for (let choice of choices) {
             // correct
         } else {
             // wrong
-         
-            currentQuestionindex++;
-            return getCurrentQuestion(currentQuestionindex);
+           
+            currentQuestionindex--;
+            // getCurrentQuestion(currentQuestionindex);
         }  
        
     });
