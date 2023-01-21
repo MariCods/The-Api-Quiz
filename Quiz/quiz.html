@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="quiz.css">
+  <title>Quiz</title>
+</head>
+
+<body>
+  <!-- <div id="myRemaining">
+    <div id="myBar"></div>
+  </div> -->
+  
+  <br>
+  <div id="countdown"></div> 
+  <div class="container">
+    <div class = "points-container">
+      <div>
+      <h2>Points: <span id="points">0 </span> </h2>
+      </div>
+    <div id="quiz">
+      <h2 id="question">What is the answer?</h2>
+      
+      <div class="choice-container">
+        <p class="choice-option">A</p>
+        <p class="choice-text" data-number="1">Choice 1</p>
+      </div>
+      
+      <div class="choice-container">
+        <p class="choice-option">B</p>
+        <p class="choice-text"data-number="2">Choice 2</p>
+      </div>
+      
+      <div class="choice-container">
+        <p class="choice-option">C</p>
+        <p class="choice-text"data-number="3">Choice 3</p>
+      </div>
+    </div>
+    <div id="end-div" class="hide">
+   <h2>End Of Quiz!!!</h2>
+   <p>
+    Enter Intials: <input id="intials" max="3" type="text">
+    <button id="submit">Submit</button>
+   </p>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- <ul>
+        <li class="solutions"></li>
+        <li class="solutions"></li>
+        <li class="solutions"></li>
+        <li class="solutions"></li>
+    </ul>
+     -->
+  <script src="script.js"></script>
+</body>
+
+</html>
