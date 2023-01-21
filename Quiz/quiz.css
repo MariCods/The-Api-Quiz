@@ -1,0 +1,28 @@
+/* #myRemaining {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    background-color: white;
+}
+
+#myBar {
+    background-color: aqua;
+    width: 10px;
+    height: 30px;
+    position: absolute;
+} */
+
+.choice-container {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.choice-option {
+    margin-right: 0.5rem;
+}
+
+.hide{
+    display: none;
+   
+}

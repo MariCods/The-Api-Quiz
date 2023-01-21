@@ -1,54 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Quiz</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
 </head>
-
 <body>
-  <div id="myRemaining">
-    <div id="myBar"></div>
-  </div>
-  
-  <br>
-  <button onclick="move()">Click Me</button> 
-  <div class="container">
-    <div id="quiz">
-      <h2 id="question">What is the answer?</h2>
-      
-      <div class="choice-container">
-        <p class="choice-option">A</p>
-        <p class="choice-text" data-number="1">Choice 1</p>
-      </div>
-      
-      <div class="choice-container">
-        <p class="choice-option">B</p>
-        <p class="choice-text"data-number="2">Choice 2</p>
-      </div>
-      
-      <div class="choice-container">
-        <p class="choice-option">C</p>
-        <p class="choice-text"data-number="3">Choice 3</p>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-  <!-- <ul>
-        <li class="solutions"></li>
-        <li class="solutions"></li>
-        <li class="solutions"></li>
-        <li class="solutions"></li>
-    </ul>
-     -->
-  <script src="script.js"></script>
+    <header>
+        <h2>Welcome to the API Quiz!!!</h2>
+       
+    </header>
+    <p>Here is a short timed quiz to test your knowledge of Javascript coding rules. 
+     The Quiz is one minute answer the questions to the best of your abilities.Right answers are worth 15 points, wrong takes 5 seconds of your timer. Timer runs out and the quiz ends.
+     <h3> Goodluck!!!</h3></p>
+    <button onclick="window.location.href='./Quiz/quiz.html';">
+        Play
+      </button>
 </body>
-
 </html>
