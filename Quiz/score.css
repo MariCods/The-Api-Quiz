@@ -1,7 +1,28 @@
-h1{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,200&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('./backgrounds/pexels-ylanite-koppens-1152662.jpg');
+}
+
+h1 {
     font-size: 50px;
     text-align: center;
-    margin:auto;
+    margin: auto;
     margin-top: 1em;
     color: rgb(34, 84, 68);
+    border: 3px solid;
+    border-radius: 15px;
+
+}
+
+#player-list {
+    text-align: center;
+    list-style-type: none;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 3em;
+    border: 3px solid;
+    border-radius: 15px;
 }

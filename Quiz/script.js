@@ -1,31 +1,30 @@
 var countdownEL = document.getElementById('countdown');
-// var win = document.querySelector(".points");
 var pointsEL = document.getElementById('points')
 var submitEl = document.getElementById('submit');
 var winCounter = 0;
 var isWin = false;
 
 
-let time = 60;
+let time = 90;
 let timerId;
 timerId = setInterval(changeCountdown, 1000);
 function changeCountdown() {
-    
-// const minutes = Math.floor(time / 60);
-let seconds = time % 60;
-let minutes = Math.floor( time / 60)
 
-// countdownEL.innerHTML = time;seconds;
+
+    let seconds = time % 60;
+    let minutes = Math.floor(time / 60)
+
+
     if (time < 0) {
         clearInterval(changeCountdown);
         return;
     } else {
         time--;
     }
-    const timeStr = time < 60 ? seconds + "s" : minutes + "m" + seconds + "s";
+    const timeStr = time < 60 ? seconds + "s" : minutes + "m " + seconds + "s";
     countdownEL.innerHTML = timeStr;
 
-    // time--;
+
 }
 
 
@@ -63,139 +62,120 @@ let questions = [
     {
         question: "What is a Boolean expression?",
 
-        choice1:"It has 2 possible paths, one is taken if the condition is true and the other is if its false",
-        choice2:"When the condition is false",
-        choice3:"An expression that can be evaluated as either true or false",
-        answer:3
+        choice1: "It has 2 possible paths, one is taken if the condition is true and the other is if its false",
+        choice2: "When the condition is false",
+        choice3: "An expression that can be evaluated as either true or false",
+        answer: 3
     },
     {
         question: "Inside which HTML element do we put the JavaScript?",
 
-        choice1:" <js>",
-        choice2:"<script>",
-        choice3:"<scripting>",
-        answer:2
+        choice1: " <js>",
+        choice2: "<script>",
+        choice3: "<scripting>",
+        answer: 2
     },
     {
         question: "How do you create a function?",
 
-        choice1:"function myFunction()",
-        choice2:"function:myFunction()",
-        choice3:"myFunction():function",
-        answer:1
+        choice1: "function myFunction()",
+        choice2: "function:myFunction()",
+        choice3: "myFunction():function",
+        answer: 1
     },
     {
         question: " A named element in a JavaScript program that is used to store and retrieve data is a _____.",
 
-        choice1:"Variable",
-        choice2:"Method",
-        choice3:"String",
-        answer:1
+        choice1: "Variable",
+        choice2: "Method",
+        choice3: "String",
+        answer: 1
     },
     {
         question: "The majority of a typical Web document will be found in:",
 
-        choice1:"The title tag",
-        choice2:"The head tag",
-        choice3:"The body tag",
-        answer:3
+        choice1: "The title tag",
+        choice2: "The head tag",
+        choice3: "The body tag",
+        answer: 3
     },
     {
         question: "When you want to use JavaScript to manipulate the browser window, the browser window's JavaScript object name is:",
 
-        choice1:"browser_window",
-        choice2:"document",
-        choice3:"Window",
-        answer:3
+        choice1: "browser_window",
+        choice2: "document",
+        choice3: "Window",
+        answer: 3
     }
 ];
 
 
-const correctTotal = 15;
-const MaxQuestions = 6;
 
-function getCurrentQuestion(index){
+
+
+function getCurrentQuestion(index) {
     const currentQuestion = questions[index];
     questionEL.textContent = currentQuestion.question;
 
-    choices.forEach(function(choice,index){
-        choice.textContent = currentQuestion["choice"+ (index + 1)]
+    choices.forEach(function (choice, index) {
+        choice.textContent = currentQuestion["choice" + (index + 1)]
     })
 }
 
 for (let choice of choices) {
-    choice.addEventListener("click", function(event) {
+    choice.addEventListener("click", function (event) {
         const clickedQuestion = event.target;
-    if (clickedQuestion.dataset.number == questions[currentQuestionindex].answer) {
+        if (clickedQuestion.dataset.number == questions[currentQuestionindex].answer) {
             // correct
-        console.log("correct"); 
-          score += 15;
-          pointsEL.textContent = score 
+            console.log("correct");
+            score += 15;
+            pointsEL.textContent = score
         } else {
-        //     // wrong
-        console.log("wrong");
-        time -= 5;
-        } 
+            //     // wrong
+            console.log("wrong");
+            time -= 15;
+        }
         currentQuestionindex++;
-        if(currentQuestionindex === questions.length || time <= 0) {
+        if (currentQuestionindex === questions.length || time <= 0) {
             endQuiz();
-        } else{
+        } else {
             getCurrentQuestion(currentQuestionindex);
         }
-        // getCurrentQuestion(currentQuestionindex);
+
     });
 }
 function endQuiz() {
-    //to be completed.
-   clearInterval(timerId);
-  quizDiv.setAttribute("class","hide");
-  let endDiv = document.getElementById("end-div");
-  endDiv.removeAttribute("class");
+
+    clearInterval(timerId);
+    quizDiv.setAttribute("class", "hide");
+    let endDiv = document.getElementById("end-div");
+    endDiv.removeAttribute("class");
 }
- console.log(currentQuestionindex);
- getCurrentQuestion(currentQuestionindex);
+console.log(currentQuestionindex);
+getCurrentQuestion(currentQuestionindex);
 
 
- 
+
 
 function saveToLocalStorage() {
     console.log('submit-score')
-let intialsEl = document.getElementById('intials');
-console.log(intialsEl);
-let intials = intialsEl.value.trim();
-console.log(intials);
-if(intials !== '') {
-    let highScores = JSON.parse(localStorage.getItem('High-Scores')) || [];
-    
-      let currentScore = {
-        score: score,
-        intials: intials,
-     }
-    highScores.push(currentScore);
-    localStorage.setItem('High-Scores', JSON.stringify(highScores));
-    window.location.href = 'highscore.html';
-} 
+    let intialsEl = document.getElementById('intials');
+    console.log(intialsEl);
+    let intials = intialsEl.value.trim();
+    console.log(intials);
+    if (intials !== '') {
+        let highScores = JSON.parse(localStorage.getItem('High-Scores')) || [];
+
+        let currentScore = {
+            score: score,
+            intials: intials,
+        }
+        highScores.push(currentScore);
+        localStorage.setItem('High-Scores', JSON.stringify(highScores));
+        window.location.href = 'highscore.html';
+    }
 
 }
 
 submitEl.onclick = saveToLocalStorage;
 
-// let question1 = {
-//     quest1: 'What are the three main building blocks for coding a website?',
-//     solutions:['html css avascript', 'css python javascript', 'web apis  html css'],
-//     correctAnswer: 2
-// };
-
-// function showQuestion(q1){
-//     let quest1Div = document.getElementById('quest1');
-//     quest1Div.textcontent = q1.title
-
-//     let sol = document.querySelectorAll('.solutions');
-//     console.log(sol);
-    
-//     sol.forEach(function(element, index){
-//         element.textcontent = q1.solutions[index];
-//     })
-// };
-
-// showQuestion(question1);

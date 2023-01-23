@@ -1,28 +1,104 @@
-/* #myRemaining {
-    width: 100%;
-    height: 30px;
-    position: relative;
-    background-color: white;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,200&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-#myBar {
-    background-color: aqua;
-    width: 10px;
-    height: 30px;
-    position: absolute;
-} */
+body {
+    background-image: url('./gamer-gf710e5bbf_1280.png');
+}
+
+.correct {
+    display: flex;
+    margin-left: 47%;
+    width: fit-content;
+    /* margin-bottom: 10%; */
+    font-size: 12px;
+    color: teal;
+    border: 2px dotted turquoise;
+    border-radius: 15px;
+    box-shadow: 10px 10px rgb(150, 198, 193);
+    background-color: aliceblue;
+}
+
+#countdown {
+    display: flex;
+    font-size: 50px;
+    margin-left: 45%;
+    width: fit-content;
+    text-align: center;
+    border: 2px dotted turquoise;
+    border-radius: 15px;
+    box-shadow: 10px 10px rgb(150, 198, 193);
+    background-color: aliceblue;
+    color: teal;
+
+}
 
 .choice-container {
     display: flex;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: 1em;
+    width: fit-content;
+    border: 2px dotted turquoise;
+    border-radius: 15px;
+    box-shadow: 10px 10px rgb(150, 198, 193);
+    background-color: aliceblue;
+    font-size: 20px;
+    color: black;
+    margin: 1.5em;
+}
+
+.choice-container:hover {
+    transform: scale(1.1);
 }
 
 .choice-option {
-    margin-right: 0.5rem;
+    color: teal;
+    font-size: 20px;
+    margin-right: 2em;
+    padding: 5px;
+    background-color: rgb(150, 198, 193);
+    box-shadow: 10px 10px rgb(71, 86, 85);
+    border: 1px solid turquoise;
+    border-radius: 15px;
 }
 
-.hide{
+
+#question {
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 5%;
+    /* margin-left: 2em; */
+    border: 2px dotted turquoise;
+    border-radius: 15px;
+    box-shadow: 10px 10px rgb(150, 198, 193);
+    background-color: aliceblue;
+    color: teal;
+}
+
+#end-div h2 {
+    font-size: 100px;
+    text-align: center;
+    color: teal;
+}
+
+#end-div p {
+    text-align: center;
+    font-size: 50px;
+    color: teal;
+}
+
+#submit {
+    font-size: 30px;
+
+}
+
+#initials {
+    font-size: 30px;
+}
+
+.hide {
     display: none;
-   
+
 }
