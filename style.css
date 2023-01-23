@@ -1,49 +1,81 @@
-*{
-    
-    background-color: rgb(215, 244, 234);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,200&display=swap');
+
+* {
+
+
     box-sizing: border-box;
     margin: 45px;
+    font-family: 'Poppins', sans-serif;
+
 }
 
-h2{
-    font-size: 75px;
+body {
+    background-image: url("./images/pixel-art-gc53c87aed_1920.png");
+
+}
+
+h2 {
+    font-size: 60px;
     text-align: center;
     justify-content: center;
-    /* margin:auto; */
-    /* margin-top: 2em; */
-    color: rgb(34, 84, 68);
+    color: whitesmoke;
+    border: 2px dotted;
+    border-radius: 15px;
     display: flex;
+    background-color: darkgrey;
+    box-shadow: 10px 10px grey;
 }
-h3{
+
+h3 {
     text-align: center;
-    font-size: 25px;
+    font-size: 40px;
+    border: 2px dotted;
+    border-radius: 15px;
+    background-color: darkgrey;
+    color: whitesmoke;
+    box-shadow: 10px 10px grey;
 }
 
-p{
+p {
     text-align: center;
-    color: rgb(42, 102, 83);
-    font-size: 20px;
+    background-color: darkgrey;
+    color: whitesmoke;
+    font-size: 23px;
+    margin: 2% 5%;
+    line-height: 3em;
+    border: 2px dotted;
+    border-radius: 15px;
+    box-shadow: 10px 10px grey;
 }
 
 
-button{
-    
-     margin-left: 43%;   
-    /* margin-top: 5rem;  */
+button {
+
+    margin-left: 45%;
     justify-content: center;
     text-align: center;
-    padding: 5px 25px 5px 25px;
-    background-color: rgb(76, 197, 197);
-    color: aliceblue;
-    font-size: 50px;
-    border: none;
-    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 35px;
+    border: 2px solid;
+    border-radius: 15px;
     cursor: pointer;
-    
+
 
 }
 
-button:hover{
-    background-color: teal;
+button:hover {
+    background-color: darkgray;
     transform: scale(1.1);
 }
+
+/* footer {
+    position: fixed;
+    
+}
+
+footer #Copyright {
+     text-align: center;
+     font-size: large;
+     color: black;
+} */
