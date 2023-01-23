@@ -1,12 +1,40 @@
-var scoreInput = document.querySelector("#scores-text");
-var scoreForm = document.querySelector("#scores-form");
-var scoreList = document.querySelector("#todo-list");
-var scoreCountSpan = document.querySelector("score-count");
+
+var gamePlayers = document.querySelector('#player-list');
 
 var scores = [];
 
-let highScores = window.localStorage.getItem('High-Score');
-let intials = window.localStorage.getItem('intials');
- 
-console.log(highScores);
-console.log(intials);
+function renderScores() {
+    // Clear todoList element and update todoCountSpan
+    gamePlayer = document.getElementById('player-list').innerText = localStorage.getItem('High-Scores');
+    // scores.textContent = gamePlayers.length;
+  
+    // Render a new li for each todo
+   for (var i = 0; i < gamePlayers.length; i++) {
+        // scores = gamePlayers[i];
+  
+    //  var li = document.createElement("li");
+    //   li.textContent = scores;
+    //  li.setAttribute(data-number, i);
+  
+    //  scores.appendChild(li);
+   }
+  }
+
+//    function inIt() {
+
+   
+//      if (gamePlayers !== null) {
+//         scores = '';
+//      }
+      renderScores();
+//   }
+
+// inIt()
+
+
+
+
+
+
+
+

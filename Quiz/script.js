@@ -156,18 +156,21 @@ function endQuiz() {
  getCurrentQuestion(currentQuestionindex);
 
 
-
+ 
 
 function saveToLocalStorage() {
+    console.log('submit-score')
 let intialsEl = document.getElementById('intials');
+console.log(intialsEl);
 let intials = intialsEl.value.trim();
+console.log(intials);
 if(intials !== '') {
     let highScores = JSON.parse(localStorage.getItem('High-Scores')) || [];
     
-    let currentScore = {
+      let currentScore = {
         score: score,
         intials: intials,
-    }
+     }
     highScores.push(currentScore);
     localStorage.setItem('High-Scores', JSON.stringify(highScores));
     window.location.href = 'highscore.html';
