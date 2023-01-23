@@ -32,7 +32,7 @@ Then you can save my initials and score.
 There is a slight error in the game where you must press the text to select the question. Otherwise the code works perfectly.
 
 Credits
-N/A
+https://maricods.github.io/The-Api-Quiz/
 
 License
 Please refer to the LICENSE in the repo.

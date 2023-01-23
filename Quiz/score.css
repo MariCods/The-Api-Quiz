@@ -3,8 +3,12 @@
 * {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background-image: url('./backgrounds/pexels-ylanite-koppens-1152662.jpg');
 }
+
+body{
+    background-image: url('./backgrounds/pixel-art-gc53c87aed_1920.png');
+}
+
 
 h1 {
     font-size: 50px;
@@ -22,6 +26,8 @@ h1 {
     list-style-type: none;
     font-size: 25px;
     font-weight: bold;
+    color: rgb(34, 84, 68);
+    background-color:grey ;
     margin: 3em;
     border: 3px solid;
     border-radius: 15px;
