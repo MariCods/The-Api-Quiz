@@ -11,7 +11,7 @@
 
 body {
     background-image: url("./Quiz/backgrounds/pixel-art-gc53c87aed_1920.png");
-
+    overflow-y: hidden;
 }
 
 h2 {
